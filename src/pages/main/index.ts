@@ -2,7 +2,7 @@ class MainPage {
   private container: HTMLElement;
 
   static TextObject = {
-    MainTitle: 'Online Store soon to be here...',
+    MainTitle: 'Online Store',
   };
 
   constructor(id: string) {
@@ -11,6 +11,7 @@ class MainPage {
 
   private createHeaderTitle(text: string) {
     const headerTitle = document.createElement('h1');
+    headerTitle.classList.add('header');
     headerTitle.innerText = text;
     return headerTitle;
   }
