@@ -6,7 +6,7 @@ class App {
 
   constructor() {
     this.container = document.body;
-    this.initialPage = new MainPage('main-page');
+    this.initialPage = new MainPage('root');
   }
 
   run() {

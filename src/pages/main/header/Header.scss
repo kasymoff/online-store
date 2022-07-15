@@ -1,0 +1,47 @@
+#header {
+  background: #121c1eae;
+  border-bottom: 2px solid #fff;
+  border-radius: 0 0 20px 20px;
+  height: 50px;
+  padding: 10px 0;
+  .container {
+    align-items: center;
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    .logo {
+      background-image: url(./assets/icons/logo.svg);
+      background-size: 48px 60px;
+      display: block;
+      font-size: 0;
+      height: 60px;
+      margin-right: 50px;
+      width: 48px;
+    }
+    .navbar {
+      display: flex;
+      flex-grow: 1;
+      gap: 50px;
+    }
+    .fav {
+      background-image: url(./assets/icons/basket.png);
+      background-position: left -8px;
+      background-repeat: no-repeat;
+      background-size: 48px 60px;
+      height: 60px;
+      width: 48px;
+      span {
+        background-color: #278d9f;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 20px;
+        padding: 4px 2px 2px 4px;
+        margin-left: 4px;
+        margin-top: 10px;
+        min-width: 20px;
+        text-align: center;
+      }
+    }
+  }
+}

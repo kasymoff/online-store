@@ -1,24 +1,18 @@
+import Header from './header/Header';
+
 class MainPage {
   private container: HTMLElement;
-
-  static TextObject = {
-    MainTitle: 'Online Store',
-  };
+  private header: Header;
 
   constructor(id: string) {
     this.container = document.createElement('div');
-  };
-
-  private createHeaderTitle(text: string) {
-    const headerTitle = document.createElement('h1');
-    headerTitle.classList.add('header');
-    headerTitle.innerText = text;
-    return headerTitle;
+    this.container.id = id;
+    this.header = new Header('header');
   }
 
   render() {
-    const title = this.createHeaderTitle(MainPage.TextObject.MainTitle);
-    this.container.append(title);
+    const headerNode = this.header.render();
+    this.container.append(headerNode);
     return this.container;
   }
 }

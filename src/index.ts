@@ -1,5 +1,5 @@
 import App from './pages/app/index';
-import './style.css';
+import './style.scss';
 
 const app = new App();
 
