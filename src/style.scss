@@ -57,7 +57,7 @@ html {
 
 .container {
   margin: 0 auto;
-  width: 1680px;
+  width: 1600px;
 }
 
 #main .container {
@@ -67,6 +67,7 @@ html {
 
 @import './pages/main/header/Header.scss';
 @import './pages/main/Main/Main.scss';
+@import './pages/main/footer/Footer.scss';
 
 #quantitySlider {
 	margin: 0 auto;
