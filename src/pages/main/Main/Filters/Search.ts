@@ -40,11 +40,23 @@ export default class Search {
     this.container.append(input);
   }
 
+  createResetButtons(): void {
+    const buttons = document.createElement('div');
+    buttons.classList.add('buttons');
+    const resetFiltersButton = document.createElement('button');
+    const resetSettingsButton = document.createElement('button');
+    resetFiltersButton.textContent = 'Сброс фильтров';
+    resetSettingsButton.textContent = 'Сброс настроек';
+    buttons.append(resetFiltersButton, resetSettingsButton);
+    this.container.append(buttons);
+  }
+
   render() {
     this.createTitle('Поиск');
     this.createSearchField();
     this.createTitle('Сортировка');
     this.createSortField();
+    this.createResetButtons();
     return this.container
   }
 }
