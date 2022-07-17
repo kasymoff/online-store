@@ -292,3 +292,65 @@
     }
   }
 }
+
+.listingWrapper {
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  margin: auto;
+  width: 100%;
+  width: 96%;
+  .listItem {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(19,20,21,.3);
+    border: 2px solid #626f71;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-wrap: wrap;
+    padding: 0;-webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(19,20,21,.3);
+    border: 2px solid #626f71;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-wrap: wrap;
+    padding: 0;
+    .itemTitle {
+      font-size: 10px;
+      font-stretch: condensed;
+      margin: 15px 0;
+      min-height: 20px;
+      padding-left: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .imageContainer {
+      background: #fff;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      .item-img {
+        height: 100px;
+        object-fit: contain;
+        pointer-events: none;
+        width: auto;
+      }
+    }
+    .listInfo {
+      font-size: 10px;
+      flex-grow: 1;
+      line-height: 1;
+      line-height: 24px;
+      list-style: none;
+      padding-left: 10px;
+      pointer-events: none;
+      text-align: center;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
