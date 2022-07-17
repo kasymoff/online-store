@@ -1,0 +1,241 @@
+.filtersWrapper {
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 20px 0 30px;
+  width: 100%;
+  .filterGroup {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(19,20,21,.3);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 1;
+    .filtersTitle {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .FilterByShape {
+      align-items: center;
+      display: flex;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .button {
+          background-color: transparent;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          border: 0;
+          cursor: pointer;
+          font-size: 0;
+          height: 40px;
+          margin: 10px 7px;
+          outline: 0;
+          position: relative;
+          width: 40px;
+        }
+        .Samsung {
+          background-image: url(./assets/icons/samsung.svg);
+        }
+        .Apple {
+          background-image: url(./assets/icons/apple.svg);
+        }
+        .Xiaomi {
+          background-image: url(./assets/icons/xiaomi.svg);
+        }
+        .button-active {
+          -webkit-filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg) brightness(83%) contrast(88%);
+          filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg) brightness(83%) contrast(88%);
+        }
+      }
+    }
+    .FilterBySize {
+      align-items: center;
+      display: flex;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .button {
+          background-color: transparent;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          border: 2px solid #fff;
+          border-radius: 50%;
+          color: #fff;
+          cursor: pointer;
+          height: 40px;
+          margin: 10px 7px;
+          outline: 0;
+          position: relative;
+          width: 40px;
+        }
+        .camera-3 {
+          background-size: 40px 40px;
+        }
+        .camera-2 {
+          background-size: 32px 32px;
+        }
+        .camera-1 {
+          background-size: 24px 24px;
+        }
+        .button-active {
+          -webkit-filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg) brightness(83%) contrast(28%);
+          filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg) brightness(83%) contrast(28%);
+        }
+      }
+    }
+    .FilterByColor {
+      align-items: center;
+      display: flex;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .button {
+          border: 0;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 0;
+          height: 30px;
+          margin: 15px 10px;
+          outline: 0;
+          position: relative;
+          width: 30px;
+        }
+        .white {
+          background-color: #fff;
+        }
+        .yellow {
+          background-color: #fdd700;
+        }
+        .red {
+          background-color: #fd0000;
+        }
+        .button-active:after {
+          border: solid #278d9f;
+          border-width: 0 4px 4px 0;
+          content: "";
+          display: block;
+          height: 10px;
+          left: 9px;
+          position: absolute;
+          top: 5px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          width: 6px;
+        }
+      }
+    }
+    .FilterByFav {
+      align-items: center;
+      display: flex;
+      margin: 10px 0;
+      .fav-input {
+        display: none;
+        height: auto;
+        width: auto;
+      }
+      .fav-input-label {
+        backdrop-filter: blur(3px);
+        background-color: hsla(0,0%,100%,.3);
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        height: 30px;
+        margin: 0 0 0 20px;
+        padding: 0;
+        position: relative;
+        width: 30px;
+        &:hover {
+          background-color: #278d9f;
+        }
+      }
+      .label-checked{
+        background-color: #278d9f;
+        &:after {
+          border: solid #fff;
+          border-width: 0 4px 4px 0;
+          content: "";
+          display: block;
+          height: 10px;
+          left: 9px;
+          position: absolute;
+          top: 5px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          width: 6px;
+        }
+      }
+    }
+    .range {
+      margin-top: 30px;
+      .range-wrapper {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        .rangeNums {
+          align-items: center;
+          -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+          border: 1px solid #278d9f;
+          border-radius: 20px;
+          display: inline-flex;
+          height: 40px;
+          justify-content: center;
+          margin: 10px 0;
+          min-width: 80px;
+        }
+        .noUi-target {
+          width: 100%;
+          height: 5px;
+          border: none;
+          .noUi-handle::before,
+          .noUi-handle::after {
+            display: none;
+          }
+          .noUi-handle {
+            box-shadow: none;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .searchWrapper {
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      background-color: rgba(19,20,21,.3);
+      border: 1px solid #278d9f;
+      border-radius: 20px;
+      padding-left: 20px;
+      position: relative;
+      .search {
+        font-family: 'Press Start 2P', cursive;
+        background-color: transparent;
+        background-image: url(./assets/icons/search.svg);
+        background-position: calc(100% - 20px);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        border: 0;
+        color: #fff;
+        font-size: 18px;
+        height: 40px;
+        margin-right: 0;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-family: 'Press Start 2P', cursive;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
