@@ -16,6 +16,10 @@
       font-size: 18px;
       margin: 10px 0;
     }
+    .searchTitle {
+      font-size: 18px;
+      margin: 20px 0;
+    }
     .FilterByShape {
       align-items: center;
       display: flex;
@@ -236,6 +240,26 @@
           color: #fff;
         }
       }
+    }
+    #select {
+      -webkit-box-align: center;
+      width: 100%;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(204, 204, 204);
+      border-radius: 4px;
+      border-style: solid;
+      border-width: 1px;
+      cursor: default;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      min-height: 38px;
+      position: relative;
+      transition: all 100ms ease 0s;
+      box-sizing: border-box;
+      outline: 0px !important;
     }
   }
 }

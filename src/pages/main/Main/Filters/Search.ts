@@ -1,3 +1,6 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+
 export default class Search {
   private container: HTMLElement;
 
@@ -6,10 +9,10 @@ export default class Search {
     this.container.classList.add('filterGroup');
   }
 
-  createTitle(): void {
+  createTitle(tit: string): void {
     const title = document.createElement('h4');
-    title.textContent = 'Поиск';
-    title.classList.add('filtersTitle');
+    title.textContent = tit;
+    title.classList.add('searchTitle');
     this.container.append(title);
   }
 
@@ -25,12 +28,23 @@ export default class Search {
   }
 
   createSortField(): void {
-    const sortField = document.createElement('div');
+    const input = document.createElement('select');
+    input.id = 'select';
+    const option1 = document.createElement('option');
+    option1.value = 'lowName';
+    option1.textContent = 'По названию, от А до Я';
+    const option2 = document.createElement('option');
+    option2.value = 'highName';
+    option2.textContent = 'По названию, от Я до А';
+    input.append(option1, option2);
+    this.container.append(input);
   }
 
   render() {
-    this.createTitle();
+    this.createTitle('Поиск');
     this.createSearchField();
+    this.createTitle('Сортировка');
+    this.createSortField();
     return this.container
   }
 }
