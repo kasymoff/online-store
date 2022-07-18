@@ -14,7 +14,7 @@ type itemObj = {
   popular: string;
 }
 
-const arrayOfItems: itemObj[] = [
+export const arrayOfItems: itemObj[] = [
   {id: 1, name: 'Apple iPhone 11', image: 'assets/db/7.png', quantity: 12, yearOfRelease: 2018, vendor: 'Apple', color: 'белый', qCamera: 3, popular: 'да'},
   {id: 2, name: 'Apple iPhone 12', image: 'assets/db/9.png', quantity: 2, yearOfRelease: 2010, vendor: 'Apple', color: 'желтый', qCamera: 3, popular: 'нет'},
   {id: 3, name: 'Apple iPhone 13', image: 'assets/db/8.png', quantity: 10, yearOfRelease: 2009, vendor: 'Apple', color: 'красный', qCamera: 3, popular: 'нет'},
@@ -26,53 +26,53 @@ const arrayOfItems: itemObj[] = [
   {id: 9, name: 'Xiaomi Redmi 9C 3/64gb', image: 'assets/db/6.png', quantity: 6, yearOfRelease: 2010, vendor: 'Xiaomi', color: 'красный', qCamera: 2, popular: 'нет'},
   {id: 10, name: 'Xiaomi Redmi Note 11', image: 'assets/db/5.png', quantity: 4, yearOfRelease: 2012, vendor: 'Xiaomi', color: 'белый', qCamera: 1, popular: 'да'}, 
 ]
-export default class Main {
-  private container: HTMLElement;
-  private valueFilter: ValueFilter;
-  private containerWrapper: HTMLElement;
-  private rangeFilter: RangeFilter;
-  private search: Search;
-  private listingWrapper: HTMLElement;
-  itemsArray: itemObj[];
+export class Main {
+  static container: HTMLElement;
+  static valueFilter: ValueFilter;
+  static containerWrapper: HTMLElement;
+  static rangeFilter: RangeFilter;
+  static search: Search;
+  static listingWrapper: HTMLElement;
+  static itemsArray: itemObj[];
 
   constructor(id: string) {
-    this.container = document.createElement('main');
-    this.container.id = id;
-    this.containerWrapper = document.createElement('div');
-    this.valueFilter = new ValueFilter();
-    this.rangeFilter = new RangeFilter();
-    this.search = new Search();
-    this.listingWrapper = document.createElement('div');
-    this.itemsArray = arrayOfItems;
+    Main.container = document.createElement('main');
+    Main.container.id = id;
+    Main.containerWrapper = document.createElement('div');
+    Main.valueFilter = new ValueFilter();
+    Main.rangeFilter = new RangeFilter();
+    Main.search = new Search();
+    Main.listingWrapper = document.createElement('div');
+    Main.itemsArray = arrayOfItems;
   }
 
-  createContainerClass(): void {
-    this.containerWrapper.classList.add('container');
+  static createContainerClass(): void {
+    Main.containerWrapper.classList.add('container');
   }
 
-  createFilters() {
+  static createFilters() {
     const filtersWrapper = document.createElement('div');
     filtersWrapper.classList.add('filtersWrapper');
-    const valFilters = this.valueFilter.render();
-    const ranFilters = this.rangeFilter.render();
-    const sear = this.search.render();
+    const valFilters = Main.valueFilter.render();
+    const ranFilters = Main.rangeFilter.render();
+    const sear = Main.search.render();
     filtersWrapper.append(valFilters);
     filtersWrapper.append(ranFilters);
     filtersWrapper.append(sear);
     return filtersWrapper;
   }
 
-  createListing(array: itemObj[]): void {
-    this.listingWrapper.classList.add('listingWrapper');
-    this.listingWrapper.innerHTML = '';
+  static createListing(array: itemObj[]): void {
+    Main.listingWrapper.classList.add('listingWrapper');
+    Main.listingWrapper.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
-      const item = this.createListItem(array[i]);
-      this.listingWrapper.append(item);
+      const item = Main.createListItem(array[i]);
+      Main.listingWrapper.append(item);
     }
-    this.containerWrapper.append(this.listingWrapper);
+    Main.containerWrapper.append(Main.listingWrapper);
   }
 
-  createListItem(obj: itemObj) {
+  static createListItem(obj: itemObj) {
     const item = document.createElement('div');
     item.classList.add('listItem');
     const title = document.createElement('h4');
@@ -105,12 +105,18 @@ export default class Main {
     return item;
   }
 
+  static clearFilters() {
+    Main.itemsArray = arrayOfItems;
+    Main.clearFilters();
+    Main.createListing(Main.itemsArray);
+  }
+
   render() {
-    this.createContainerClass()
-    const filters = this.createFilters();
-    this.containerWrapper.append(filters);
-    this.container.append(this.containerWrapper);
-    this.createListing(this.itemsArray);
-    return this.container;
+    Main.createContainerClass();
+    const filters = Main.createFilters();
+    Main.containerWrapper.append(filters);
+    Main.container.append(Main.containerWrapper);
+    Main.createListing(Main.itemsArray);
+    return Main.container;
   }
 }
