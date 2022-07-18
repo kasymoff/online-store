@@ -55,6 +55,17 @@ html {
   font-family: 'Press Start 2P', cursive;
 }
 
+#root {
+	width: 100%;
+	.App {
+		color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100%;
+	}
+}
+
 .container {
   margin: 0 auto;
   width: 1600px;
@@ -72,4 +83,77 @@ html {
 #quantitySlider {
 	margin: 0 auto;
 	width: 1280px;
+}
+
+@media(max-width: 1702px) {
+  #header {
+    .container {
+      width: 100%;
+      padding: 0;
+			.logo {
+				margin-left: 15px;
+			}
+			.fav {
+				margin-right: 15px;
+			}
+    }
+  }
+  #main {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 1480px) {
+  #header {
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  #main {
+    .container {
+      width: 100%;
+    }
+  }
+	.filtersWrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.listingWrapper {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+
+@media(max-width: 982px) {
+	.filtersWrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.listingWrapper {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media(max-width: 768px) {
+	.listingWrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#header {
+    .container {
+			.logo {
+				background-size: 36px 60px;
+			}
+			.fav {
+				width: 60px;
+			}
+    }
+  }
+}
+
+
+@media(max-width: 486px) {
+	.listingWrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
