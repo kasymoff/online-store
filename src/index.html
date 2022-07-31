@@ -7,6 +7,68 @@
   <title>OnlineStore</title>
 </head>
 <body>
-  
+  <header id="header">
+    <div class="container">
+      <a href="#" class="logo"></a>
+      <nav class="navbar">
+        <h1>Online Store</h1>
+      </nav>
+      <fav class="fav">
+        <span>0</span>
+      </fav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container">
+      <div class="filtersWrapper">
+        <div class="filterGroup">
+          <h4 class="filtersTitle">Фильтры по значению</h4>
+          <div id="valueWrapper">
+            <div class="FilterByShape">
+              Произодитель:
+              <ul>
+                <button class="button Samsung"></button>
+                <button class="button Apple"></button>
+                <button class="button Xiaomi"></button>
+              </ul>
+            </div>
+            <div class="FilterBySize">
+              Количество камер:
+              <ul>
+                <button class="button camera-3">3</button>
+                <button class="button camera-2">2</button>
+                <button class="button camera-1">1</button>
+              </ul>
+            </div>
+            <div class="FilterByColor">
+              Цвет:
+              <ul>
+                <button class="button white"></button>
+                <button class="button yellow"></button>
+                <button class="button red"></button>
+              </ul>
+            </div>
+            <div class="FilterByFav">
+              Только популярные:
+              <div>
+                <input type="checkbox" class="fav-input" id="fav-input">
+                <label for="checkbox" class="fav-input-label"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filterGroup" id="filterGroupRange">
+          <h4 class="filtersTitle">Фильтры по диапазону</h4>
+          <div class="range" id="slider1"></div>
+          <div class="range" id="slider2"></div>
+        </div>
+        <div class="filterGroup"></div>
+      </div>
+      <div class="listingWrapper">
+
+      </div>
+    </div>
+  </main>
+  <footer></footer>
 </body>
 </html>

@@ -26,6 +26,7 @@ export const arrayOfItems: itemObj[] = [
   {id: 9, name: 'Xiaomi Redmi 9C 3/64gb', image: 'assets/db/6.png', quantity: 6, yearOfRelease: 2010, vendor: 'Xiaomi', color: 'красный', qCamera: 2, popular: 'нет'},
   {id: 10, name: 'Xiaomi Redmi Note 11', image: 'assets/db/5.png', quantity: 4, yearOfRelease: 2012, vendor: 'Xiaomi', color: 'белый', qCamera: 1, popular: 'да'}, 
 ]
+
 export class Main {
   static container: HTMLElement;
   static valueFilter: ValueFilter;
