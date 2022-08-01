@@ -12,6 +12,8 @@ class App {
   run() {
     const mainPageHTML = this.initialPage.render();
     this.container.append(mainPageHTML);
+
+    
   }
 }
 

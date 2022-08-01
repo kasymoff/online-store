@@ -46,7 +46,9 @@ export default class Search {
     const resetFiltersButton = document.createElement('button');
     const resetSettingsButton = document.createElement('button');
     resetFiltersButton.textContent = 'Сброс фильтров';
+    resetFiltersButton.id = 'resetFilters';
     resetSettingsButton.textContent = 'Сброс настроек';
+    resetSettingsButton.id = 'resetSettings';
     buttons.append(resetFiltersButton, resetSettingsButton);
     this.container.append(buttons);
   }

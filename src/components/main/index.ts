@@ -1,8 +1,8 @@
 import Header from './header/Header';
-import Main from './Main/Main';
+import { Main } from './Main/Main';
 import Footer from './footer/Footer';
 
-class MainPage {
+export default class MainPage {
   private container: HTMLElement;
   private header: Header;
   private main: Main;
@@ -26,5 +26,3 @@ class MainPage {
     return this.container;
   }
 }
-
-export default MainPage;

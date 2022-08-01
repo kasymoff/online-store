@@ -76,9 +76,9 @@ html {
 	flex-direction: column;
 }
 
-@import './pages/main/header/Header.scss';
-@import './pages/main/Main/Main.scss';
-@import './pages/main/footer/Footer.scss';
+@import './components/main/header/Header.scss';
+@import './components/main/Main/Main.scss';
+@import './components/main/footer/Footer.scss';
 
 #quantitySlider {
 	margin: 0 auto;
